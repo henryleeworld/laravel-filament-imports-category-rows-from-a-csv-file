@@ -1,0 +1,19 @@
+{
+    " failed to import.": "匯入失敗。",
+    "Administrator": "系統管理員",
+    "Categories": "類別",
+    "category": "類別",
+    "Category A": "A 類別",
+    "Description": "說明",
+    "Last Updated": "最後更新時間",
+    "Name": "名稱",
+    "row": "行",
+    "rows": "行",
+    "SEO description": "搜尋引擎最佳化說明",
+    "SEO title": "搜尋引擎最佳化標題",
+    "Slug": "網址代稱",
+    "This is the description for Category A.": "這是 A 類別的描述。",
+    "Visibility": "可見度",
+    "Wow! It's just so amazing.": "哇！這實在太奇妙了吧。",
+    "Your category import has been completed and :successful_rows :rows have been imported.": "您的類別匯入已完成，已匯入 :successful_rows :rows。"
+}
