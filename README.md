@@ -1,4 +1,4 @@
-# Laravel 11 Filament 從 CSV 檔案匯入類別資料列
+# Laravel 12 Filament 從 CSV 檔案匯入類別資料列
 
 Filament 從 CSV 檔案匯入類別資料列採用快速建立簡捷的 TALL（Tailwind CSS、Alpine.js、Laravel 和 Livewire）堆疊應用程式的工具組，上傳檔案中的每一行都應該包含一筆匹配的相關資訊，如果您想要上傳的實際資料包含逗號，請用引號括住該項資料，在上傳資料中不當使用逗號、引號和換行符號，可說是發生內容錯誤最常見的原因。
 
@@ -31,5 +31,5 @@ $ php artisan queue:work
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/sTzb5oQ.gif)
+![](https://i.imgur.com/fOXbkXQ.gif)
 > 上傳資料的格式必須正確

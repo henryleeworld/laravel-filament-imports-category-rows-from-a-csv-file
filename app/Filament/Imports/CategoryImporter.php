@@ -6,6 +6,7 @@ use App\Models\Category;
 use Filament\Actions\Imports\ImportColumn;
 use Filament\Actions\Imports\Importer;
 use Filament\Actions\Imports\Models\Import;
+use Illuminate\Support\Number;
 
 class CategoryImporter extends Importer
 {
@@ -44,7 +45,7 @@ class CategoryImporter extends Importer
         ];
     }
 
-    public function resolveRecord(): ?Category
+    public function resolveRecord(): Category
     {
         return Category::firstOrNew([
             'slug' => $this->data['slug'],
@@ -53,10 +54,10 @@ class CategoryImporter extends Importer
 
     public static function getCompletedNotificationBody(Import $import): string
     {
-        $body = __('Your category import has been completed and :successful_rows :rows have been imported.', ['successful_rows' => number_format($import->successful_rows), 'rows' => __(str('row')->plural($import->successful_rows))]);
+        $body = __('Your category import has been completed and :successful_rows :rows have been imported.', ['successful_rows' => Number::format($import->successful_rows), 'rows' => __(str('row')->plural($import->successful_rows))]);
 
         if ($failedRowsCount = $import->getFailedRowsCount()) {
-            $body .= ' ' . number_format($failedRowsCount) . ' ' . __(str('row')->plural($failedRowsCount)) . __(' failed to import.');
+            $body .= ' ' . Number::format($failedRowsCount) . ' ' . __(str('row')->plural($failedRowsCount)) . __(' failed to import.');
         }
 
         return $body;
